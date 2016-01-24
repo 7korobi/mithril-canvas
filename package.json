@@ -1,13 +1,13 @@
 {
   "name": "mithril-canvas",
   "description": "Mithril Canvas library",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "7korobi <7korobi@gmail.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/7korobi/mithril-canvas"
   },
-  "main": "mithril-giji.js",
+  "main": "mithril-canvas.js",
   "licenses": [
     {
       "type": "MIT",
