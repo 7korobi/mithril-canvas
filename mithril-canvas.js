@@ -1,9 +1,10 @@
 /**
  mithril-canvas - Mithril Canvas library
- @version v0.0.1
+ @version v0.0.2
  @link https://github.com/7korobi/mithril-canvas
  @license 
 **/
+
 
 (function() {
   var Canvas, calc, calc_touch_A, calc_touch_B, present_functions;

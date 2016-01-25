@@ -1,10 +1,4 @@
-chai = require 'chai'
-sinon = require 'sinon'
-expect = chai.expect
-
-chai.use require 'sinon-chai'
-
-Canvas = require("../mithril-canvas.js")
+Canvas = require("../mithril-canvas.min.js")
   ios:    false
   ff:     false
   old:    false
