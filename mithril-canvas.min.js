@@ -1,6 +1,6 @@
 /**
  mithril-canvas - Mithril Canvas library
- @version v0.0.2
+ @version v0.0.4
  @link https://github.com/7korobi/mithril-canvas
  @license 
 **/
