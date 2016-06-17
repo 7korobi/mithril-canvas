@@ -57,8 +57,8 @@ present_functions = [
   "onmove"
 ]
 
-Canvas =
-  controller: (attr, present, options)->
+Canvas = (present)->
+  controller: (attr, options)->
     {size: [width, height]} = options
     size = "#{width}x#{height}"
     canvas = null

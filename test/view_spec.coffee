@@ -7,22 +7,22 @@ Canvas = CanvasFactory
 
 describe "customize for", ->
   it "old chrome", ->
-    canvas = CanvasFactory(chrome: true, old: true)
+    canvas = CanvasFactory(chrome: true, old: true)()
     expect( canvas ).to.have.property "view"
     expect( canvas ).to.have.property "controller"
 
   it "chrome", ->
-    canvas = CanvasFactory(chrome: true)
+    canvas = CanvasFactory(chrome: true)()
     expect( canvas ).to.have.property "view"
     expect( canvas ).to.have.property "controller"
 
   it "firefox", ->
-    canvas = CanvasFactory(ff: true)
+    canvas = CanvasFactory(ff: true)()
     expect( canvas ).to.have.property "view"
     expect( canvas ).to.have.property "controller"
 
   it "ios", ->
-    canvas = CanvasFactory(ios: true)
+    canvas = CanvasFactory(ios: true)()
     expect( canvas ).to.have.property "view"
     expect( canvas ).to.have.property "controller"
 
@@ -30,7 +30,7 @@ describe "customize for", ->
 describe "view", ->
   it "use module", ->
     data_cache = {}
-    canvas = ({size: [width, height], foo})->
+    present = ({size: [width, height], foo})->
       expect(  width ).to.eq 800
       expect( height ).to.eq 600
       expect( foo[0] ).to.eq -10
@@ -50,7 +50,8 @@ describe "view", ->
         expect( state ).to.eq "boot"
         # not to do
 
-    c = new Canvas.controller "#head", canvas,
+    canvas = Canvas present
+    c = new canvas.controller "#head",
       size: [800, 600]
       foo: [-10,  10]
     expect( c.canvas_attr.width ).to.eq 800
